@@ -279,4 +279,43 @@
     .search-form {
         width: 200px;
     }
+    .main-section {
+        flex-direction: column;
+    }
+    .image-block {
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        border: none;
+        height: 200px;
+        width: calc(100% + 48px);
+        transform: translateX(-24px);
+    }
+    .image-block img {
+        height: 90%;
+    }
+    .info-block__title {
+        margin-top: 16px;
+    }
+    .info-block__text {
+        margin-bottom: 16px;
+    }
+    .info-block__details {
+        margin: 72px 0 24px;
+        position: relative;
+        justify-content: space-between;
+    }
+    .info-block__price,
+    .favorite-icon {
+        position: absolute;
+    }
+    .info-block__price {
+        top: -56px;
+        left: 0;
+    }
+    .favorite-icon {
+        top: -48px;
+        right: 0;
+    }
+    .info-block .button {
+        margin: 0;
+    }
 }
