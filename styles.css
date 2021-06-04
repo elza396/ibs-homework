@@ -150,6 +150,130 @@
 .liked .favorite-icon .stroke {
     opacity: 1;
 }
+
+/*Product Page*/
+.main-section {
+    margin: 24px 0;
+    color: #000000;
+    display: flex;
+}
+.image-block {
+    border: 1px solid #F2F2F2;
+    min-width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.info-block__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+.info-block__subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+.info-block__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 24px;
+}
+.info-block__details {
+    display: flex;
+    align-items: center;
+}
+.info-block__price {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--accent-color);
+    margin-right: 16px;
+}
+.info-block .button {
+    margin: 0 16px;
+    width: 160px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.info-block .button:hover {
+    background-color: #E99330;
+}
+.info-block .button:active {
+    background-color: #c87a21;
+}
+.counter {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    border: 1px solid var(--default-color);
+    align-items: center;
+    box-sizing: border-box;
+}
+.counter__button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: transparent;
+    transition: var(--default-transition);
+    cursor: pointer;
+}
+.counter__button:hover {
+    background-color: #ececec;
+}
+.counter__button:active {
+    background-color: #cdcdcd;
+}
+.counter__button.remove {
+    border-right: 1px solid var(--default-color);
+}
+.counter__button.add {
+    border-left: 1px solid var(--default-color);
+}
+.remove::before,
+.add::before,
+.add::after {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    content: '';
+    background-color: var(--accent-color);
+}
+.remove::before {
+    width: 14px;
+    height: 2px;
+}
+.add::before {
+    width: 14px;
+    height: 2px;
+}
+.add::after {
+    width: 2px;
+    height: 14px;
+}
+.counter__number {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
 /*Медиа запрос*/
 @media only screen and (max-width: 740px) {
     .search-form {
