@@ -285,6 +285,10 @@
     .search-form {
         width: 200px;
     }
+    .card {
+        max-width: calc(50% - 48px);
+    }
+
     .main-section {
         flex-direction: column;
     }
