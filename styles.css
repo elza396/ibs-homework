@@ -81,7 +81,7 @@
     justify-content: center;
 }
 .card {
-    margin: 8px 8px;
+    margin: 8px;
     border: none;
     width: 220px;
     height: 272px;
@@ -212,9 +212,11 @@
     line-height: 28px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: var(--default-transition);
 }
 .info-block .button:hover {
     background-color: #E99330;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 .info-block .button:active {
     background-color: #c87a21;
