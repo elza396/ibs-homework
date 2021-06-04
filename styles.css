@@ -150,3 +150,9 @@
 .liked .favorite-icon .stroke {
     opacity: 1;
 }
+/*Медиа запрос*/
+@media only screen and (max-width: 740px) {
+    .search-form {
+        width: 200px;
+    }
+}
