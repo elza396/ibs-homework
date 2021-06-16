@@ -1,9 +1,3 @@
-var currency = {
-    EUR: '€',
-    USD: '$',
-    RUB: '₽'
-}
-
 var productID = location.search.slice(4);
 
 ajax("GET", `item/${productID}`, function(item) {
@@ -20,7 +14,7 @@ ajax("GET", `item/${productID}`, function(item) {
             <p class="info-block__subtitle">Details</p>
             <p class="info-block__text">${product.details}</p>
             <div class="info-block__details">
-                <p class="info-block__price">${currency[product.price.currency]}${product.price.value}</p>
+                <p class="info-block__price">${getAliasCurrency(product.price.currency)}${product.price.value}</p>
                 <div class="counter">
                     <button class="counter__button remove"></button>
                     <p class="counter__number">1</p>
@@ -38,5 +32,4 @@ ajax("GET", `item/${productID}`, function(item) {
             mainSection.classList.add('liked');
         }
         content.append(mainSection);
-
 })

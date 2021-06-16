@@ -1,9 +1,3 @@
-var currency = {
-    EUR: '€',
-    USD: '$',
-    RUB: '₽'
-}
-
 ajax("GET", "item", function(items) {
     var catalog = document.querySelector('.catalog');
     items.content.forEach(item => {
@@ -17,7 +11,7 @@ ajax("GET", "item", function(items) {
                 </svg>
                 <img class="card_image" src=${API_URL + item.picture.path} alt=${item.picture.alt}/>
                 <p class="card_title">${item.name}</p>
-                <p class="card_price">${currency[item.price.currency]}${item.price.value}</p>`;
+                <p class="card_price">${getAliasCurrency(item.price.currency)}${item.price.value}</p>`;
         card.classList.add('card');
         if(item.like) {
             card.classList.add('liked');
