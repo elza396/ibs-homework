@@ -1,10 +1,10 @@
 var input = document.querySelector('.search-form__input');
 input.addEventListener('input', searchItem);
 
+var delayTimer;
 function searchItem(e) {
     var searchText = e.target.value.toLowerCase();
     var cards = document.querySelectorAll('.card');
-    var delayTimer;
     clearTimeout(delayTimer);
     delayTimer = setTimeout(function() {
         for (var i = 0; i < cards.length; i++) {
