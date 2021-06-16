@@ -1,4 +1,4 @@
-function getAliasCurrency(currency) {
+export function getAliasCurrency(currency) {
     switch (currency) {
         case 'EUR':
             return '€';

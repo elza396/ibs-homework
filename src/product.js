@@ -1,9 +1,13 @@
-var productID = location.search.slice(4);
+import {ajax, API_URL} from "./api";
+import {getAliasCurrency} from "./currency";
+import './styles.css';
+
+const productID = location.search.slice(4);
 
 ajax("GET", `item/${productID}`, function(item) {
-    var content = document.querySelector('.content');
-    var mainSection = document.createElement('div');
-    var product = item.content;
+    const content = document.querySelector('.content');
+    const mainSection = document.createElement('div');
+    const product = item.content;
     mainSection.innerHTML =
         `<div class="image-block">
                 <img src=${API_URL + product.picture.path} alt=${product.picture.alt} />
