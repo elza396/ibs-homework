@@ -139,6 +139,10 @@
     top: 8px;
     right: 8px;
 }
+.card_hidden {
+    display: none;
+}
+
 .favorite-icon:hover {
     opacity: 0.5;
 }
