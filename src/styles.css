@@ -94,6 +94,7 @@
     transition: var(--default-transition);
     position: relative;
     cursor: pointer;
+    text-decoration: none;
 }
 .card:hover {
     background-color: #F2F2F2;
@@ -105,6 +106,8 @@
 }
 .card_image {
     margin: 40px 0 8px 0;
+    height: 140px;
+    object-fit: none;
 }
 .card_title {
     height: 40px;
@@ -113,10 +116,13 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    white-space: nowrap;
+    color: var(--default-color);
+    -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--default-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
 }
 .card_price {
     height: 20px;
@@ -133,6 +139,10 @@
     top: 8px;
     right: 8px;
 }
+.card_hidden {
+    display: none;
+}
+
 .favorite-icon:hover {
     opacity: 0.5;
 }
